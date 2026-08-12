@@ -1,0 +1,91 @@
+/* ============================================================
+   IMAGE GRID + single-image modal.
+   Square thumbnails, wraps naturally (flexbox) — fits ~4-5 per
+   row on desktop, fewer on smaller screens, no hardcoded column
+   count needed. Click a thumbnail to see it full-size; click
+   anywhere on the dark background to close.
+   ============================================================ */
+.img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.img-grid-thumb {
+  width: 220px;
+  height: 220px;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--mid-gray);
+  cursor: pointer;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.img-grid-thumb:hover {
+  border-color: var(--dark-gray);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .img-grid-thumb {
+    width: 140px;
+    height: 140px;
+    max-height: 140px;
+  }
+}
+
+/* ---- Single-image modal ---- */
+.img-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+.img-modal.open { display: flex; }
+
+.img-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.9);
+}
+
+.img-modal-image {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.img-modal-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 2;
+  background: none;
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color .2s ease;
+}
+.img-modal-close:hover { background: rgba(255, 255, 255, 0.12); }
+.img-modal-close svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--white);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

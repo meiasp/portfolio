@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanaporn Asp — Digital Designer</title>
+<link rel="icon" type="image" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="cursor.js" defer></script>
+<script src="project-data.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<!-- Custom cursor -->
+ <div class="box">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; width:0; height:0;">
+  <defs>
+    <filter id="filter-name">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="my-blur" />
+      <feColorMatrix in="my-blur" mode="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -8"
+        result="my-gooey" />
+    </filter>
+  </defs>
+</svg>
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="logo-mark">
+      <img src="img/logo.png" alt="Logo Mark">
+    </div>
+    <div class="brand-text">
+      <div class="name">Thanaporn Asp</div>
+      <div class="role">DIGITAL DESIGNER</div>
+    </div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="https://www.linkedin.com/in/thanaporn-meiji/">LinkedIn</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+  <button class="hamburger" id="openMenu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="top-row">
+    <div class="brand">
+      <div class="logo-mark"></div>
+      <div class="brand-text">
+        <div class="name">Thanaporn Asp</div>
+        <div class="role">DIGITAL DESIGNER</div>
+      </div>
+    </div>
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+  </div>
+  <nav>
+    <a href="#showcase" class="close-link">Work</a>
+    <a href="https://www.linkedin.com/in/thanaporn-meiji/" class="close-link">LinkedIn</a>
+    <a href="resume.html" class="close-link">Resume</a>
+    <a href="#archives" class="close-link">Archives</a>
+  </nav>
+</div>
+
+<!-- HERO / FEATURED PROJECT CAROUSEL -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+  <div class="hero-inner">
+    <div class="hero-title" id="heroTitleDesktop">UnitMeet</div>
+
+    <div class="hero-card">
+      <h2 id="heroTitleMobile" style="display:none;">UnitMeet</h2>
+      <p id="heroDesc">A meeting room booking and management web application for authorized company employees to easily reserve rooms for themselves or on behalf of clients.</p>
+      <div class="hero-tags" id="heroTags">
+        <span class="tag">ux/ui design</span>
+        <span class="tag">team</span>
+      </div>
+    </div>
+    <div class="dots" id="dots"></div>
+
+    <div class="hero-controls">
+      <button class="btn-primary" id="viewDetails">View Project Details</button>
+      <button class="circle-btn" id="prevBtn" aria-label="Previous project">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg class="myicon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 12H18M6 12L11 7M6 12L11 17"/>
+        </svg>
+      </button>
+      <button class="circle-btn" id="nextBtn" aria-label="Next project">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg class="myicon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 12H18M18 12L13 7M18 12L13 17"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="section" id="showcase">
+  <h2 class="section-title">SHOWCASE</h2>
+  <div class="showcase-grid" id="showcaseGrid"></div>
+</section>
+
+<!-- ARCHIVES -->
+<section class="archives" id="archives">
+  <h2 class="section-title">ARCHIVES</h2>
+  <div class="filter-row" id="filterRow">
+    <button class="filter-pill active" data-filter="all">All</button>
+    <button class="filter-pill" data-filter="uxui">UX/UI Design</button>
+    <button class="filter-pill" data-filter="graphic">Graphic &amp; Branding</button>
+    <button class="filter-pill" data-filter="motion">Motion Design</button>
+    <button class="filter-pill" data-filter="illustration">Illustration</button>
+  </div>
+  <div class="archive-grid" id="archiveGrid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom">
+    <div class="brand">
+      <div class="brand-text">
+        <div class="name">Thanaporn Asp</div>
+        <div class="role">DIGITAL DESIGNER</div>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 Thanaporn Asp. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>

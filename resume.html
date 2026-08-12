@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume · Thanaporn Asp</title>
+<link rel="icon" type="image" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project-details.css">
+<link rel="stylesheet" href="resume.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="cursor.js" defer></script>
+<link rel="stylesheet" href="img-grid.css">
+<script src="img-grid.js" defer></script>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="box">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; width:0; height:0;">
+  <defs>
+    <filter id="filter-name">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="my-blur" />
+      <feColorMatrix in="my-blur" mode="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -8"
+        result="my-gooey" />
+    </filter>
+  </defs>
+</svg>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="brand-link">
+  <div class="brand">
+    <div class="logo-mark"><img src="img/logo.png" alt="Logo Mark"></div>
+    <div class="brand-text">
+      <div class="name">Thanaporn Asp</div>
+      <div class="role">DIGITAL DESIGNER</div>
+    </div>
+  </div>
+  </a>
+  <nav class="desktop-nav">
+    <a href="index.html">Home</a>
+    <a href="https://www.linkedin.com/in/thanaporn-meiji/">LinkedIn</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+  <button class="hamburger" id="openMenu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="top-row">
+    <div class="brand">
+      <div class="logo-mark"></div>
+      <div class="brand-text">
+        <div class="name">Thanaporn Asp</div>
+        <div class="role">DIGITAL DESIGNER</div>
+      </div>
+    </div>
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+  </div>
+  <nav>
+    <a href="index.html" class="close-link">Back to Work</a>
+    <a href="https://www.linkedin.com/in/thanaporn-meiji/" class="close-link">LinkedIn</a>
+  </nav>
+</div>
+
+<!-- RESUME -->
+<main class="project-page">
+
+  <!-- INTRO -->
+  <section class="project-hero" style="padding-bottom: 20px;">
+    <div class="project-hero-inner">
+      <h1 class="project-title">Thanaporn Asp</h1>
+      <p class="project-lede">a ux/ui designer with experience in mobile and web, backed by over five years as a freelance artist. brings a strong eye for visual detail and user-centered design, with a passion for emerging technologies, and interactive design..</p>
+      <div class="hero-tags">
+        <span class="tag">UX/UI Design</span>
+        <span class="tag">Product Thinking</span>
+        <span class="tag">Branding</span>
+        <span class="tag">Illustration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="project-section bg-panel" id="experience">
+    <div class="project-section-inner">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <h3>UXUI Designer</h3>
+            <div class="resume-entry-sub">Unit Co., Ltd</div>
+          </div>
+          <div class="resume-entry-dates">Jan 2024 - April 2026</div>
+        </div>
+        <ul class="resume-bullets">
+          <li>Work closely in gather and analyze client requirements with frontend developers to create userflows, and visually compelling interfaces, and interactive elements for clients products.</li>
+          <li>Designed responsive wireframes and interactive prototypes in figma to communicate layout and functionality</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <h3>Freelance Illustrator</h3>
+            <div class="resume-entry-sub">Self-employed, Ongoing</div>
+          </div>
+          <div class="resume-entry-dates">Jan 2021 - Present</div>
+        </div>
+        <ul class="resume-bullets">
+          <li>Worked with thai and international small businesses and individual clients to deliver custom illustrations and design assets for branding and social media use</li>
+          <li>Managed timelines and communication independently, ensuring high client satisfaction and repeat work</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <h3>UXUI Designer</h3>
+            <div class="resume-entry-sub">Collectr NFT Platform, Collectr.live</div>
+          </div>
+          <div class="resume-entry-dates">Feb 2024 - Jan 2025</div>
+        </div>
+        <ul class="resume-bullets">
+          <li>Conducted user research to understand target audience behaviors, needs, and pain points.</li>
+          <li>Applied user experience and user interface design skills,including user journey design, wireframing, design systems, and prototyping, to create user-friendly digital experiences.</li>
+          <li>Continuously updated and refined user research to adapt to evolving client and user needs.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <h3>Graphic Design,Content Creator Internship</h3>
+            <div class="resume-entry-sub">KP Learning Space, a Bangkok-based Digital Artwork Production House</div>
+          </div>
+          <div class="resume-entry-dates">Feb 2023 - May 2023</div>
+        </div>
+        <ul class="resume-bullets">
+          <li>Delivered over 10 social media graphic designs, enhancing communication and consistently surpassing project deadlines.</li>
+          <li>Actively contributed to brainstorming sessions with content creator interns, shaping innovative designs for social media content creation.</li>
+          </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="project-section" id="education">
+    <div class="project-section-inner">
+      <h2 class="section-title">Education</h2>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <h3>Bachelor of Fine Arts, Communication Design Program</h3>
+            <div class="resume-entry-sub">Mahidol University International College, first class honors with GPA of 3.61</div>
+          </div>
+          <div class="resume-entry-dates">Sep 2019 — July 2023</div>
+        </div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <h3>Exchange Student Program</h3>
+            <div class="resume-entry-sub">Xi’an Jiaotong Liverpool International University</div>
+          </div>
+          <div class="resume-entry-dates">Aug 2022 — Jan 2023</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="project-section bg-panel" id="skills">
+    <div class="project-section-inner">
+      <h2 class="section-title">Skills</h2>
+      <div class="resume-tag-group">
+        <span class="tag">Figma</span>
+        <span class="tag">User Research</span>
+        <span class="tag">Prototyping</span>
+        <span class="tag">Design Systems</span>
+        <span class="tag">Wireframing</span>
+        <span class="tag">HTML/CSS</span>
+      </div>
+    </div>
+    <div class="img-grid">
+  <img class="img-grid-thumb" src="https://media.licdn.com/dms/image/v2/D562DAQH8wP7J7Q1Qbw/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1714137163166?e=1787112000&v=beta&t=Yo2dKE3d6oHIO5mQe0l1rgBswxGKzRfl6b9-Oslzk9I">
+  <img class="img-grid-thumb" src="https://media.licdn.com/dms/image/v2/D562DAQE1uuNEWcuzDg/profile-treasury-document-images_1280/B56Z3TDrrHKIAY-/1/1777362453188?e=1787184000&v=beta&t=VNK4LEIF1zijhiZ6_fMj1W_sFYkPf8Fs9hNm36N9dFk">
+</div>
+  </section>
+
+</main>
+
+<div class="img-modal" id="imgModal">
+  <div class="img-modal-backdrop" id="imgModalBackdrop"></div>
+  <img src="" alt="" id="imgModalImage" class="img-modal-image">
+  <button class="img-modal-close" id="imgModalClose">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 6L18 18M18 6L6 18"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  // Mobile menu open/close — same behavior as index.html/project-details.html
+  const openMenu = document.getElementById('openMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  openMenu.addEventListener('click', ()=> mobileMenu.classList.add('open'));
+  closeMenu.addEventListener('click', ()=> mobileMenu.classList.remove('open'));
+  document.querySelectorAll('.close-link').forEach(l=>{
+    l.addEventListener('click', ()=> mobileMenu.classList.remove('open'));
+  });
+</script>
+</body>
+</html>

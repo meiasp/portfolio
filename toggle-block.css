@@ -1,0 +1,62 @@
+/* ============================================================
+   TOGGLE BLOCK — collapsible "title ⌄" dropdown, usable inside
+   any project-details section. Built on native <details>/
+   <summary> so open/close needs no JS.
+   ============================================================ */
+.toggle-block {
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius);
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.toggle-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  background-color: var(--white);
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.05));
+  -webkit-filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.05));
+}
+.toggle-header::-webkit-details-marker { display: none; }   /* hide default marker (Chrome/Safari) */
+.toggle-header::marker { display: none; }
+
+.toggle-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.toggle-chevron {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform .2s ease;
+}
+.toggle-block[open] .toggle-chevron {
+  transform: rotate(180deg);
+}
+
+.toggle-content {
+  padding: 24px;
+  background-color: var(--white);
+}
+.toggle-content h3,
+.toggle-content h4 {
+  margin-bottom: 8px;
+}
+.toggle-content p {
+  margin-bottom: 8px;
+}
+.toggle-content img {
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .toggle-header { padding: 14px 16px; }
+  .toggle-content { padding: 16px; }
+}

@@ -1,0 +1,285 @@
+h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+
+h4 {font-size:16px; font-weight:600; }
+
+/* ---------- PROJECT HERO ---------- */
+.project-page {
+  padding-bottom: 90px;
+}
+
+.project-hero {
+  padding: 70px 120px 0;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.project-lede {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  max-width: 720px;
+  margin: 0 0 24px;   /* was 0 auto — auto-centering doesn't make sense when left-aligned */
+}
+.project-hero .hero-tags {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.project-hero-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--mid-gray);
+  aspect-ratio: 16/9;
+  margin-bottom: 60px;
+}
+.project-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- META ROW ---------- */
+.project-meta {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 120px 90px;
+}
+
+.project-meta div { font-size: 14.5px; font-weight: 600; }
+.project-meta span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.project-meta .meta-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* ---------- QUOTE BLOCK ---------- */
+.project-quote {
+  padding: 0 120px;
+  text-align: left;
+}
+
+.project-quote .section-quote {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* ---------- FULL-WIDTH SECTION BLOCKS ---------- */
+.project-section {
+  padding: 40px 120px;
+  scroll-margin-top: 90px;
+}
+.project-section-inner {
+  max-width: 1400px;
+  margin: 0;          /* was 0 auto — left-align instead of center */
+  text-align: left;
+}
+.project-section img:not(.img-grid-thumb) {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--light-gray);
+  aspect-ratio: 16/9;
+  display: block;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.project-section img.img-9-16 {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 40px;
+}
+
+.project-section .section-title {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.project-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.highlight {
+  display: inline;
+  background: var(--highlight);
+  color: var(--dark);
+  padding: 2px 8px;
+  border-radius: 999px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ---------- AUDIENCE GRID ---------- */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+  margin: 0;
+}
+.audience-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.audience-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.audience-icon svg { width: 24px; height: 24px; }
+.audience-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.bg-panel    { background: var(--subtle); }
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    max-width: 50%;
+}
+
+/* ---------- CTA ---------- */
+.project-cta {
+  text-align: left;
+  padding: 90px 120px;
+}
+.project-cta p {
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: var(--dark-gray);
+}
+.project-cta .btn-primary {
+  display: inline-block;
+  padding: 16px 34px;
+}
+
+/* ---------- BOTTOM NAVIGATOR ---------- */
+.bottom-navigator {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--white);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--light-gray);
+  padding: 12px 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.bottom-navigator::-webkit-scrollbar { display: none; }
+
+.bn-link {
+  flex-shrink: 0;
+  font-size: 13.5px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--dark-gray);
+  transition: background .2s ease, color .2s ease;
+}
+.bn-link:hover,
+.bn-link.active {
+  background: var(--dark);
+  color: #fff;   /* was var(--dark) — text should be white against the dark pill, not gray */
+}
+
+.bn-top {
+  flex-shrink: 0;
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .2s ease, transform .2s ease, background-color .2s ease;
+}
+
+.bn-top .myicon{
+  stroke: var(--white);
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke .2s ease;
+}
+
+.scroll-progress {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--light-gray);   /* fixed: was var(--light-gray) */
+  z-index: 41;
+}
+.scroll-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--dark);    /* fixed: was var(--dark) */
+  transition: width .1s linear;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px){
+  .project-hero { padding: 50px 24px 0; }
+  .project-meta { padding: 0 24px 60px; gap: 24px; }
+  .project-quote { padding: 0 24px; }
+  .project-quote .section-quote { font-size: 24px;}
+  .project-title { font-size: 32px; }
+  .project-lede { font-size: 15.5px; }
+  .project-section { padding: 60px 24px; }
+  .project-section .section-title { font-size: 32px; margin-bottom: 20px; }
+  .project-cta { padding: 60px 24px; }
+  .bottom-navigator { padding: 10px 14px; gap: 2px; }
+  .bn-link { font-size: 12.5px; padding: 7px 12px; }
+  .audience-grid { grid-template-columns: 1fr; gap: 16px; }
+  .project-section img:not(.img-grid-thumb) { width: 100%; }
+  .project-section img.img-9-16 { max-width: 220px; }
+}
+

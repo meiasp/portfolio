@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Details · Thanaporn Asp</title>
+<link rel="icon" type="image" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project-details.css">
+<link rel="stylesheet" href="toggle-block.css">
+<link rel="stylesheet" href="h-carousel.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="cursor.js" defer></script>
+<script src="project-data.js" defer></script>
+<script src="project-details.js" defer></script>
+<script src="lazy-gifs.js" defer></script>
+<script src="toggle-block.js" defer></script>
+<script src="h-carousel.js" defer></script>
+<link rel="stylesheet" href="img-grid.css">
+<script src="img-grid.js" defer></script>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="box">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position:absolute; width:0; height:0;">
+  <defs>
+    <filter id="filter-name">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="my-blur" />
+      <feColorMatrix in="my-blur" mode="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -8"
+        result="my-gooey" />
+    </filter>
+  </defs>
+</svg>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="brand-link">
+  <div class="brand">
+    <div class="logo-mark"><img src="img/logo.png" alt="Logo Mark"></div>
+    <div class="brand-text">
+      <div class="name">Thanaporn Asp</div>
+      <div class="role">DIGITAL DESIGNER</div>
+    </div>
+  </div>
+  </a>
+  <nav class="desktop-nav">
+    <a href="index.html">Home</a>
+    <a href="https://www.linkedin.com/in/thanaporn-meiji/">LinkedIn</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+  <button class="hamburger" id="openMenu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="top-row">
+    <div class="brand">
+      <div class="logo-mark"></div>
+      <div class="brand-text">
+        <div class="name">Thanaporn Asp</div>
+        <div class="role">DIGITAL DESIGNER</div>
+      </div>
+    </div>
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+  </div>
+  <nav>
+    <a href="index.html" class="close-link">Back to Work</a>
+    <a href="https://www.linkedin.com/in/thanaporn-meiji/" class="close-link">LinkedIn</a>
+  </nav>
+</div>
+
+<!-- PROJECT CONTENT (all filled in by project-details.js from PROJECTS in project-data.js) -->
+<main class="project-page" id="top">
+
+  <section class="project-hero" id="overview">
+    <div class="project-hero-inner">
+      <h1 class="project-title" id="projTitle"></h1>
+      <p class="project-lede" id="projLede"></p>
+      <div class="hero-tags" id="projTags"></div>
+    </div>
+    <div class="project-hero-img">
+      <img id="projHeroImg" src="" alt="">
+    </div>
+  </section>
+
+  <div class="project-meta">
+    <div><span class="meta-title">Role</span><span id="projRole"></span></div>
+    <div><span class="meta-title">Team</span><span id="projTeam"></span></div>
+    <div><span class="meta-title">Industry</span><span id="projIndustry"></span></div>
+    <div><span class="meta-title">Tools</span><span id="projTools"></span></div>
+  </div>
+
+  <div class="project-quote">
+    <h2 class="section-quote" id="projHook"></h2>
+  </div>
+
+  <section class="project-section" id="background">
+    <div class="project-section-inner">
+      <h2 class="section-title">Background</h2>
+      <div id="projBackground"></div>
+    </div>
+  </section>
+
+  <section class="project-section bg-panel" id="concept">
+    <div class="project-section-inner">
+      <h2 class="section-title">Concept</h2>
+      <div id="projConcept"></div>
+      <div class="carousel-group" id="projConceptButtons"></div>
+    </div>
+  </section>
+
+  <section class="project-section bg-panel" id="who-its-for">
+    <div class="project-section-inner">
+      <h2 class="section-title">Who It's For</h2>
+      <div class="audience-grid" id="projAudienceGrid"></div>
+    </div>
+  </section>
+
+  <section class="project-section" id="key-features">
+    <div class="project-section-inner">
+      <h2 class="section-title">Key Features</h2>
+      <div id="projKeyFeatures"></div>
+    </div>
+  </section>
+
+  <section class="project-section bg-panel" id="design-system">
+    <div class="project-section-inner">
+      <h2 class="section-title">Design System</h2>
+      <div id="projDesignSystem"></div>
+    </div>
+  </section>
+
+  <section class="project-section" id="reflection">
+    <div class="project-section-inner">
+      <h2 class="section-title">Reflection</h2>
+      <div id="projReflection"></div>
+    </div>
+  </section>
+
+  <section class="project-cta bg-panel">
+    <p>Thanks for reading</p>
+    <a href="index.html" class="btn-primary">Back to Work</a>
+  </section>
+
+</main>
+
+<div class="scroll-progress">
+  <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+</div>
+
+<div class="img-modal" id="imgModal">
+  <div class="img-modal-backdrop" id="imgModalBackdrop"></div>
+  <img src="" alt="" id="imgModalImage" class="img-modal-image">
+  <button class="img-modal-close" id="imgModalClose">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 6L18 18M18 6L6 18"/>
+    </svg>
+  </button>
+</div>
+
+<!-- BOTTOM NAVIGATOR -->
+<nav class="bottom-navigator" id="bottomNav">
+  <a href="#overview" class="bn-link active" data-target="overview">Overview</a>
+  <a href="#background" class="bn-link" data-target="background">Background</a>
+  <a href="#concept" class="bn-link" data-target="concept">Concept</a>
+  <a href="#who-its-for" class="bn-link" data-target="who-its-for">Who It's For</a>
+  <a href="#key-features" class="bn-link" data-target="key-features">Key Features</a>
+  <a href="#design-system" class="bn-link" data-target="design-system">Design system</a>
+  <a href="#reflection" class="bn-link" data-target="reflection">Reflection</a>
+  <a href="#top" class="bn-top" aria-label="Back to top">
+    <svg class="myicon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 6V18M12 6L7 11M12 6L17 11"/>
+    </svg>
+  </a>
+</nav>
+
+</body>
+</html>

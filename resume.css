@@ -1,0 +1,64 @@
+/* ============================================================
+   RESUME — experience entries, bullet lists, skill tag groups.
+   ============================================================ */
+.resume-entry {
+  margin-bottom: 32px;
+}
+.resume-entry:last-child { margin-bottom: 0; }
+
+.resume-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.resume-entry-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.resume-entry-sub {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+.resume-entry-dates {
+  font-size: 13px;
+  color: var(--dark-gray);
+  white-space: nowrap;
+}
+
+.resume-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.resume-bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--dark);
+}
+.resume-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--dark);
+}
+
+.resume-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .resume-entry-header { flex-direction: column; gap: 4px; }
+}
